@@ -32,5 +32,27 @@
 | 27 | Ich habe die Änderung in der `server.js` committed und per `git push` ins Repository übertragen.| ![docker-27](./images/docker-27.png) |
 | 28 | Ich habe im Docker Hub einen neuen Personal Access Token mit dem Namen `jenkins-push` erstellt. Dieser wird benötigt, um über Jenkins Images in mein Docker-Repository zu pushen.| ![docker-28](./images/docker-28.png) |
 | 29 | Ich habe mein lokal erstelltes Docker-Image zuerst mit dem Befehl `docker tag` umbenannt und anschliessend mit `docker push` erfolgreich in mein öffentliches Docker Hub Repository hochgeladen. | ![docker-29](./images/docker-29.png) |
+| 30 | Ich habe das erstellte Docker-Image in mein Docker Hub Repository `zilan33/node-web-app` gepusht. | ![docker-30](./images/docker-30.png) |
+| 31 | Ich habe mein Docker-Image erfolgreich mit GitHub Actions deployed. Der Log zeigt, dass der Upload abgeschlossen wurde und der Service unter der Adresse `http://0.0.0.0:10000` live ist. Die Meldung „Your service is live“ bestätigt, dass der Deployment-Prozess erfolgreich war. | ![docker-31](./images/docker-31.png) |
+| 32 | Ich habe mein Projekt so konfiguriert, dass der Deployment-Prozess auf [Render](https://render.com) erfolgt. Das bedeutet, dass mein Service nach einem erfolgreichen Build automatisch als Live-Service bereitgestellt wird.| ![docker-32](./images/docker-32.png) |
+| 33 |Nach dem erfolgreichen Deployment auf Render konnte ich die Ausgabe meiner geänderten `server.js` direkt auf der Live-Seite `devops-09-deployment-docker.onrender.com` sehen. | ![docker-25](./images/docker-25.png) |
 
+## Fazit
+Das neunte Lernjournal war mit Abstand das herausforderndste von allen bisherigen Modulen. Der Aufbau einer vollständigen CI/CD-Pipeline mit **Jenkins**, **Docker**, **GitHub** und **Render** erforderte nicht nur technisches Verständnis, sondern auch viel Geduld und Troubleshooting-Fähigkeiten.
 
+### Herausforderungen
+Während der Umsetzung traten mehrere Schwierigkeiten auf:
+- Die **Integration von Docker mit Jenkins** war komplexer als erwartet. Besonders die Konfiguration der **Docker Daemon-Verbindung über Port 2375**, das Setzen der richtigen **Credentials**, und das Verständnis für das Zusammenspiel von Images, Containern und Jenkins-Build-Steps kosteten viel Zeit.
+- Auch die **Authentifizierung gegenüber GitHub und DockerHub** brachte anfangs einige Fehlermeldungen mit sich, bis die richtigen Tokens und Zugriffsrechte korrekt gesetzt waren.
+- Die **automatische Portfreigabe in VS Code** sowie die Sichtbarkeit der Commits und Docker-Ereignisse im Repository erforderten viel Aufmerksamkeit.
+- Der letzte Schritt - **Live-Deployment mit Render** – war ebenfalls neu und erforderte zusätzliche Recherche, insbesondere was die Docker-Registry und das automatisierte Deployment angeht.
+
+### Was ich gelernt habe
+Trotz (oder gerade wegen) dieser Schwierigkeiten war der Lerneffekt enorm:
+- Ich verstehe nun, wie man eine Node.js-Anwendung in ein Docker-Image verpackt und containerisiert.
+- Ich habe gelernt, wie man **Build- und Deployment-Jobs in Jenkins** Schritt für Schritt aufsetzt – inklusive Vor- und Nachaktionen.
+- Ich weiss jetzt, wie man **DockerHub** als zentrale Registry einbindet und wie ein **automatisiertes Deployment** auf Plattformen wie Render funktioniert.
+- Ganz besonders habe ich den **Zusammenhang zwischen Code-Änderung, Commit, Image-Build, Push und Deployment** verstanden – also den kompletten DevOps-Prozess in der Praxis durchlaufen.
+
+**Fazit:**  
+Auch wenn dieser Teil sehr zeitintensiv und stellenweise frustrierend war, konnte ich durch das selbstständige Arbeiten mein Verständnis für **automatisiertes Software Deployment** deutlich vertiefen. Der Aufwand hat sich gelohnt :-)
