@@ -1,5 +1,7 @@
 # DevOps 09 Deployment Docker
 
+> **Hinweis:** Die Screenshots in diesem Lernjournal sind im Vergleich eher klein dargestellt. Vermutlich passt das Markdown-Rendering auf GitHub die Bildgrösse automatisch an die Spaltenbreite der Beschreibung an, weshalb sich die Darstellung nicht manuell anpassen liess.
+
 ## Lernjournal
 | Schritt | Beschreibung | Screenshot |
 |--------|--------------|------------|
