@@ -3,13 +3,13 @@
 ## Lernjournal
 | Schritt | Beschreibung | Screenshot |
 |--------|--------------|------------|
-| 1 | Ich habe das Repository aufgesetzt und überprüft, ob die nötigen Dateien (.gitignore, Dockerfile, Jenkinsfile etc.) vorhanden sind. | ![](/mnt/data/docker-01.png) |
-| 2 | Ich habe ein einfaches Node.js-Projekt mit einer Startseite aufgesetzt, das später in einem Container ausgeführt werden soll. | ![](/mnt/data/docker-02.png) |
-| 3 | Ich habe mein Projekt lokal im Browser getestet, um sicherzustellen, dass der Webserver korrekt antwortet. | ![](/mnt/data/docker-03.png) |
-| 4 | Ich habe das Dockerfile erstellt, das meine App auf Basis eines Node.js-Images konfiguriert. | ![](/mnt/data/docker-04.png) |
-| 5 | Ich habe den Docker-Build-Befehl ausgeführt, um aus dem Quellcode ein Docker-Image zu erzeugen. | ![](/mnt/data/docker-05.png) |
-| 6 | Ich habe das Jenkins-Projekt erstellt und als Freestyle-Projekt konfiguriert. | ![](/mnt/data/docker-06.png) |
-| 7 | Ich habe die Docker-Container geprüft, um zu bestätigen, dass mein Image erfolgreich als Container läuft. | ![](/mnt/data/docker-07.png) |
-| 8 | Ich habe den `docker run` Befehl verwendet, um den Container manuell mit Port-Mapping zu starten. | ![](/mnt/data/docker-08.png) |
-| 9 | Ich habe versucht, das GitHub-Repository mit Jenkins zu verbinden, bin jedoch auf ein Authentifizierungsproblem gestoßen. | ![](/mnt/data/docker-09.png) |
-| 10 | Ich habe in GitHub einen Personal Access Token erstellt, um ihn für Jenkins als Anmeldeinformation zu verwenden. | ![](/mnt/data/Bildschirmfoto 2025-05-18 um 01.09.03.png) |
+| 1 | Ich habe das Repository initialisiert und alle wichtigen Dateien wie `.gitignore`, `Dockerfile`, `Jenkinsfile`, `package.json` und `server.js` erstellt. | ![docker-01](./images/docker-01.png) |
+| 2 | Ich habe die Startseite der Node.js-App im Browser über `localhost:3001` getestet. Die Seite zeigt die Nachricht „Hello FS2025 DevOps Course! :-)“. | ![docker-02](./images/docker-02.png) |
+| 3 | Ich habe in VS Code das `Dockerfile` geöffnet und den Befehl `docker build -t devops-nodewebapp .` verwendet, um das Image lokal zu bauen. | ![docker-03](./images/docker-03.png) |
+| 4 | Im `Dockerfile` wurde das offizielle Node.js-Image genutzt und der Arbeitsordner sowie die Quelldateien definiert. | ![docker-04](./images/docker-04.png) |
+| 5 | Der Docker-Build wurde im Terminal erfolgreich abgeschlossen, alle Layer wurden gebaut und gecached. | ![docker-05](./images/docker-05.png) |
+| 6 | Ich habe in Jenkins ein neues Freestyle-Projekt mit dem Namen `DevOpsDockerBuild` angelegt. | ![docker-06](./images/docker-06.png) |
+| 7 | In Docker Desktop wurde der Container `devops-webapp` als „Running“ angezeigt – das bedeutet, dass mein Container erfolgreich gestartet wurde. | ![docker-07](./images/docker-07.png) |
+| 8 | Ich habe den Container mit dem Befehl `docker run -d -p 3001:3000 --name devops-webapp devops-nodewebapp` ausgeführt. | ![docker-08](./images/docker-08.png) |
+| 9 | Beim Versuch, mein GitHub-Repo mit Jenkins zu verbinden, trat ein Authentifizierungsfehler auf, da Passwort-Authentifizierung nicht mehr unterstützt wird. | ![docker-09](./images/docker-09.png) |
+| 10 | Ich habe in GitHub unter Developer Settings einen „Personal Access Token (classic)“ generiert, um Jenkins-Zugang zu ermöglichen. | ![docker-10](./images/docker-10.png) |
