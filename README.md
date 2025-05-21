@@ -56,5 +56,4 @@ Trotz (oder gerade wegen) dieser Schwierigkeiten war der Lerneffekt enorm:
 - Ich weiss jetzt, wie man **DockerHub** als zentrale Registry einbindet und wie ein **automatisiertes Deployment** auf Plattformen wie Render funktioniert.
 - Ganz besonders habe ich den **Zusammenhang zwischen Code-Änderung, Commit, Image-Build, Push und Deployment** verstanden – also den kompletten DevOps-Prozess in der Praxis durchlaufen.
 
-**Fazit:**  
 Auch wenn dieser Teil sehr zeitintensiv und stellenweise frustrierend war, konnte ich durch das selbstständige Arbeiten mein Verständnis für **automatisiertes Software Deployment** deutlich vertiefen. Der Aufwand hat sich gelohnt :-)
